@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Rollstuhlgerechtes Fahrzeug</title>
+  <desc id="desc">Stilisierte Darstellung eines Fahrzeugs fuer Krankenbefoerderung</desc>
+  <rect width="1200" height="700" fill="#f6f8fb" />
+  <g transform="translate(120 220)">
+    <rect x="60" y="120" width="860" height="190" rx="42" fill="#0077b6" />
+    <rect x="240" y="40" width="420" height="130" rx="26" fill="#0096d6" />
+    <rect x="280" y="62" width="152" height="78" rx="14" fill="#dff4ff" />
+    <rect x="450" y="62" width="172" height="78" rx="14" fill="#dff4ff" />
+    <rect x="710" y="150" width="118" height="160" rx="10" fill="#005f8f" />
+    <circle cx="250" cy="330" r="62" fill="#1f2937" />
+    <circle cx="250" cy="330" r="28" fill="#d1d5db" />
+    <circle cx="760" cy="330" r="62" fill="#1f2937" />
+    <circle cx="760" cy="330" r="28" fill="#d1d5db" />
+    <path d="M905 310 l120 66 l-24 40 l-120 -66 z" fill="#1ea95f" />
+  </g>
+</svg>

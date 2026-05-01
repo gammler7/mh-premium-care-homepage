@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">M.H Premium Care Logo</title>
+  <desc id="desc">Logo-Banner fuer M.H Premium Care Fahrservice</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0b132b" />
+      <stop offset="100%" stop-color="#1c2541" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" rx="28" fill="url(#bg)" />
+  <g fill="#ffffff">
+    <text x="70" y="138" font-family="Segoe UI, Arial, sans-serif" font-size="68" font-weight="700">
+      M.H Premium Care
+    </text>
+    <text x="72" y="202" font-family="Segoe UI, Arial, sans-serif" font-size="36" opacity="0.92">
+      Fahrservice - Krankenbefoerderung mit Rollstuhl
+    </text>
+  </g>
+  <g transform="translate(930 58)">
+    <rect x="0" y="0" width="210" height="184" rx="20" fill="#ffffff" opacity="0.1" />
+    <circle cx="56" cy="146" r="20" fill="#7bd389" />
+    <circle cx="156" cy="146" r="20" fill="#7bd389" />
+    <rect x="28" y="70" width="160" height="50" rx="12" fill="#7bd389" />
+    <rect x="52" y="44" width="72" height="28" rx="8" fill="#7bd389" />
+  </g>
+</svg>

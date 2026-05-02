@@ -119,6 +119,242 @@ h1 {
   background: var(--primary-dark);
 }
 
+button.button {
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+
+.booking-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1.25rem;
+  overflow-y: auto;
+}
+
+.booking-modal[hidden] {
+  display: none;
+}
+
+.booking-modal__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgb(15 23 42 / 0.55);
+  cursor: pointer;
+}
+
+.booking-modal__panel {
+  position: relative;
+  width: min(960px, 100%);
+  margin: auto;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 24px 48px rgb(0 0 0 / 0.18);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  z-index: 1;
+}
+
+.booking-modal__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 10px;
+  background: #f3f4f6;
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.booking-modal__close:hover {
+  background: #e5e7eb;
+}
+
+.booking-modal__header {
+  text-align: center;
+  max-width: 36rem;
+  margin: 0 auto 1.75rem;
+  padding-right: 2rem;
+}
+
+.booking-modal__header h2 {
+  margin: 0 0 0.65rem;
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  color: #111827;
+}
+
+.booking-modal__intro {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.booking-modal__grid {
+  display: grid;
+  grid-template-columns: minmax(200px, 260px) 1fr;
+  gap: clamp(1.5rem, 4vw, 2.75rem);
+  align-items: start;
+}
+
+.booking-modal__aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.booking-modal__avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #e0f2fe, #d1fae5);
+  color: var(--primary-dark);
+  font-weight: 700;
+  font-size: 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  flex-shrink: 0;
+}
+
+.booking-modal__contact-block {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+}
+
+.booking-modal__icon {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+.booking-modal__contact-label {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.booking-modal__contact-value {
+  margin: 0.15rem 0 0;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.booking-modal__contact-value a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.booking-modal__contact-value a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.booking-modal__hours {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.booking-form__row--2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #f3f4f6;
+  font: inherit;
+  color: var(--text);
+}
+
+.booking-form input::placeholder,
+.booking-form textarea::placeholder {
+  color: #6b7280;
+}
+
+.booking-form select {
+  color: #374151;
+  cursor: pointer;
+}
+
+.booking-form textarea {
+  resize: vertical;
+  min-height: 7rem;
+}
+
+.booking-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.35rem;
+}
+
+.booking-form__submit {
+  padding: 0.75rem 1.25rem;
+  background: #0f2942;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.booking-form__submit:hover {
+  background: #0a1f33;
+}
+
+@media (max-width: 720px) {
+  .booking-modal__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-modal__hours {
+    text-align: left;
+  }
+
+  .booking-modal__avatar {
+    margin: 0;
+  }
+
+  .booking-form__row--2 {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-form__actions {
+    justify-content: stretch;
+  }
+
+  .booking-form__submit {
+    width: 100%;
+  }
+}
+
 .section {
   padding: 3rem 0;
 }

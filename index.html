@@ -42,7 +42,14 @@
               Sie benötigen eine komfortable und professionelle Krankenfahrt?
               Wir bringen Sie sicher zu Ihrem Termin - pünktlich und zuverlässig.
             </p>
-            <a class="button" href="tel:+494088194376">Jetzt Termin vereinbaren</a>
+            <button
+              type="button"
+              class="button"
+              id="open-booking-modal"
+              aria-haspopup="dialog"
+            >
+              Jetzt Fahrt buchen
+            </button>
           </div>
         </div>
       </section>
@@ -122,6 +129,118 @@
         </nav>
       </div>
     </footer>
+
+    <div
+      id="booking-modal"
+      class="booking-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="booking-modal-title"
+      hidden
+    >
+      <div class="booking-modal__backdrop" data-close-booking-modal tabindex="-1"></div>
+      <div class="booking-modal__panel">
+        <button
+          type="button"
+          class="booking-modal__close"
+          data-close-booking-modal
+          aria-label="Schließen"
+        >
+          ×
+        </button>
+        <div class="booking-modal__header">
+          <h2 id="booking-modal-title">Buchen Sie jetzt Ihre Fahrt</h2>
+          <p class="booking-modal__intro">
+            Dies ist eine unverbindliche Buchungsanfrage. Wir melden uns mit einem
+            Angebot oder Rückfragen bei Ihnen.
+          </p>
+        </div>
+        <div class="booking-modal__grid">
+          <aside class="booking-modal__aside" aria-label="Kontakt">
+            <div class="booking-modal__avatar" aria-hidden="true">M.H</div>
+            <div class="booking-modal__contact-block">
+              <span class="booking-modal__icon" aria-hidden="true">📞</span>
+              <div>
+                <p class="booking-modal__contact-label">Rufen Sie uns an</p>
+                <p class="booking-modal__contact-value">
+                  <a href="tel:+494088194376">040 88194376</a>
+                </p>
+              </div>
+            </div>
+            <div class="booking-modal__contact-block">
+              <span class="booking-modal__icon" aria-hidden="true">✉</span>
+              <div>
+                <p class="booking-modal__contact-label">Schreiben Sie uns eine E-Mail</p>
+                <p class="booking-modal__contact-value">
+                  <a href="mailto:m.hosseinitaxi@gmail.com">m.hosseinitaxi@gmail.com</a>
+                </p>
+              </div>
+            </div>
+            <p class="booking-modal__hours">Montag bis Freitag: 07:30 – 18:00 Uhr</p>
+          </aside>
+          <form class="booking-form" id="booking-form" novalidate>
+            <div class="booking-form__row booking-form__row--2">
+              <input type="text" name="name" placeholder="Name" required autocomplete="name" />
+              <select name="service" required>
+                <option value="" disabled selected>Service auswählen</option>
+                <option value="Rollstuhlfahrt">Rollstuhlfahrt / Rampe</option>
+                <option value="Krankenfahrt">Krankenfahrt zum Termin</option>
+                <option value="Dialyse / Reha">Dialyse / Reha</option>
+                <option value="Sonstiges">Sonstiges (siehe Nachricht)</option>
+              </select>
+            </div>
+            <div class="booking-form__row booking-form__row--2">
+              <input
+                type="email"
+                name="email"
+                placeholder="E-Mail-Adresse"
+                required
+                autocomplete="email"
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Telefonnummer"
+                required
+                autocomplete="tel"
+              />
+            </div>
+            <div class="booking-form__row">
+              <input type="text" name="datetime" placeholder="Datum und Uhrzeit" required />
+            </div>
+            <div class="booking-form__row">
+              <input
+                type="text"
+                name="destination"
+                placeholder="Genauer Ziel-Ort (Straße, Haus-Nr., PLZ, Ort)"
+                required
+              />
+            </div>
+            <div class="booking-form__row">
+              <input
+                type="text"
+                name="origin"
+                placeholder="Genauer Start-Ort (Straße, Haus-Nr., PLZ, Ort)"
+                required
+              />
+            </div>
+            <div class="booking-form__row">
+              <input type="text" name="persons" placeholder="Anzahl Person" required />
+            </div>
+            <div class="booking-form__row">
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Alle wichtigen Infos für uns (besonderes Gepäck, Rollstuhl, notwendige Abstecher oder Umwege, zeitliche Informationen, …)"
+              ></textarea>
+            </div>
+            <div class="booking-form__actions">
+              <button type="submit" class="booking-form__submit">Buchungsanfrage senden</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie Hinweis">
       <p>
